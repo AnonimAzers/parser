@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup as bs
 ##Получение контента с сайта
 site = "http://utmiit.ru/ZR/ZR1.htm"
 content = requests.get(site)
-soup = bs(content.text.encode("cp1252").decode("cp1251"), "html.parser")
+soup = bs(content.text, "html.parser")
 
 ##Регистрация команд
 commands = ["/станадркабинет", "/расп", "/каб"]
